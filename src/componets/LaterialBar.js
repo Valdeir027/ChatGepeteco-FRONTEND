@@ -1,10 +1,10 @@
-function LaterialBar(params) {
+import Nav from "./Nav";
+
+function LaterialBar({ selectPage }) {
   return (
-    <div className="p-3" style={styles.appbar}>
+    <div className="p-2" style={styles.appbar}>
       <div className="h-25" style={styles.actions}>
-        <button className="btn btn-light" style={styles.button}>
-          <i class="bi bi-chat-square-fill"></i>
-        </button>
+        <Nav selectPage={selectPage}></Nav>
       </div>
     </div>
   );

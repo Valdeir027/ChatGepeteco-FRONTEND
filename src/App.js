@@ -4,11 +4,17 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import Loading from "./componets/Loading";
 import LaterialBar from "./componets/LaterialBar";
-import ChatsSession from "./componets/ChatsSession";
+import Pages from "./componets/Pages";
 
 function App() {
+  // var web = new WebSocket("");
   const [isLoading, setIsLoading] = useState(true);
+  const [page, setPage] = useState("chat");
 
+  const selectPage = (value) => {
+    console.log("valor que vem do value ", value);
+    setPage(value);
+  };
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -20,10 +26,10 @@ function App() {
   }
 
   return (
-    <div className="d-flex vh-100 flex justify-content-center align-items-center  bg-secondary box-shadow">
+    <div className=" container-fluid d-flex vh-100 flex justify-content-center align-items-center  bg-secondary box-shadow">
       <div className="main d-flex flex" style={style.main}>
-        <LaterialBar></LaterialBar>
-        <ChatsSession></ChatsSession>
+        <LaterialBar selectPage={selectPage}></LaterialBar>
+        <Pages page={page} selectPage={selectPage}></Pages>
       </div>
     </div>
   );
