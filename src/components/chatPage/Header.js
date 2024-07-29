@@ -1,6 +1,6 @@
 import IconButton from "../IconButton";
 
-function Header({ SelectPage }) {
+function Header({ SelectPage, socket }) {
   return (
     <div
       className=" d-flex w-100  aling-itens-center justify-content-between"

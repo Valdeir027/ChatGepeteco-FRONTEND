@@ -1,4 +1,4 @@
-export default function UniqueChat({ title, messagem }) {
+function ContactCard({ nome, numero }) {
   return (
     <div
       className="d-flex justify-content-between align-items-center boder-bottom border-light p-2 w-100"
@@ -16,10 +16,10 @@ export default function UniqueChat({ title, messagem }) {
         >
           <div className="d-flex flex-column">
             <div className="d-flex align-items-center">
-              <b className="">{title}</b>
+              <b className="">{nome}</b>
             </div>
             <div className="d-flex align-items-center">
-              <p className="text-body-secondary">{messagem}</p>
+              <p className="text-body-secondary">{numero}</p>
             </div>
           </div>
         </div>
@@ -33,3 +33,5 @@ const sytles = {
     cursor: "pointer",
   },
 };
+
+export default ContactCard;

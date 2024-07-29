@@ -4,7 +4,7 @@ export default function Nav({ selectPage }) {
   };
 
   return (
-    <div>
+    <div className="d-flex flex-column">
       <button
         className="btn btn-light my-2"
         style={styles.button}

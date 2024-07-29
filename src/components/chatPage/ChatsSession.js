@@ -5,15 +5,6 @@ import ChatsArea from "./chats/ChatsArea";
 
 function ChatsSession({ selectPage }) {
   const [search, setSearch] = useState([]);
-  const [isAnimated, setIsAnimated] = useState(false);
-  useEffect(() => {
-    setIsAnimated(true);
-
-    // Remove a classe após a animação para permitir repetições
-    setTimeout(() => {
-      setIsAnimated(false);
-    }, 500);
-  }, []);
 
   const handleValueChange = (value) => {
     setSearch(value);
@@ -21,11 +12,9 @@ function ChatsSession({ selectPage }) {
   const onChange = () => {
     console.log(search);
   };
+
   const styles = {
     main: {
-      transition: "width 0.5s ease-in-out, height 0.5s ease-in-out",
-      height: isAnimated ? "100%" : "0%",
-      overFlow: "hidden",
       backgroundColor: "#DCDCDC",
     },
   };

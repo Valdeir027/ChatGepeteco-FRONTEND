@@ -3,7 +3,10 @@ import Nav from "./Nav";
 function LaterialBar({ selectPage }) {
   return (
     <div className="p-2" style={styles.appbar}>
-      <div className="h-25" style={styles.actions}>
+      <div
+        className="h-25 d-flex aling-itens-center justify-content-center"
+        style={styles.actions}
+      >
         <Nav selectPage={selectPage}></Nav>
       </div>
     </div>
@@ -12,7 +15,7 @@ function LaterialBar({ selectPage }) {
 
 const styles = {
   appbar: {
-    width: "5%",
+    width: "60px",
     height: "100%",
   },
   button: {
